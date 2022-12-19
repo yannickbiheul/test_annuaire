@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Personne{% endblock %}
+
+{% block body %}
+    <h1>Test Annuaire</h1>
+
+    {{ include('personne/_form.html.twig') }}
+
+    {% if personneTrouvee is defined %}
+    
+        <div class="card mt-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ personneTrouvee.prenom }} {{ personneTrouvee.nom }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ personneTrouvee.mail }}</h6>
+                <p class="card-text">{{ personneTrouvee.telCourt }} - {{ personneTrouvee.telLong }}</p>
+            </div>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

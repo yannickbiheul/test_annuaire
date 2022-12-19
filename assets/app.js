@@ -10,3 +10,8 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+let form = document.getElementsByTagName("form");
+let select = document.querySelector('select');
+let options = select[0];
+
